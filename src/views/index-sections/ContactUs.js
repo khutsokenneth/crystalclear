@@ -2,8 +2,8 @@
 import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
 import{ init } from 'emailjs-com';
-
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import {
     Button,
     Input,
@@ -40,8 +40,23 @@ export default function ContactUs() {
     emailjs.send('service_63zdsmk', 'crystalclear_id', emailParams, "user_Jv3pSmG4I0JPcMzx1Iek2")
       .then((result) => {
           console.log("worked " +result.text);
+          toast.success("Message successfully sent, please await response", {position: "bottom-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,})
       }, (error) => {
           console.log("did not work "+error.text);
+
+          toast.error("message not sent, please try again", {position: "bottom-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,})
       });
   }
 
@@ -111,6 +126,7 @@ export default function ContactUs() {
         </div>
       </Col>
     </Row>
+    <ToastContainer />
   </Container>
   
   );
