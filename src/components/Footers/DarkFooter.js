@@ -13,25 +13,9 @@ function DarkFooter() {
             <li>
               <a
                 href="#"
-                target="_blank"
+                onClick={(e) => e.preventDefault()}
               >
-                Creative Tim
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                target="_blank"
-              >
-                About Us
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                target="_blank"
-              >
-                Blog
+                Testimonials
               </a>
             </li>
           </ul>
@@ -42,7 +26,7 @@ function DarkFooter() {
           A product by{" "}
           <a
             href="#"
-            target="_blank"
+            onClick={(e) => e.preventDefault()}
           >
             Khutso Kenneth Baloyi
           </a>
