@@ -15,11 +15,11 @@ import {
 } from "reactstrap";
 
 // core components
-import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
 import ProfilePageHeader from "components/Headers/ProfilePageHeader.js";
 import DarkFooter from "components/Footers/DarkFooter.js";
+import CrystalNavbar from "components/Navbars/CrystalNavbar";
 
-function ProfilePage() {
+function Pricing() {
   const [pills, setPills] = React.useState("2");
   React.useEffect(() => {
     document.body.classList.add("profile-page");
@@ -34,7 +34,7 @@ function ProfilePage() {
   }, []);
   return (
     <>
-      <ExamplesNavbar />
+      <CrystalNavbar />
       <div className="wrapper">
         <ProfilePageHeader />
         <div className="section">
@@ -222,4 +222,4 @@ function ProfilePage() {
   );
 }
 
-export default ProfilePage;
+export default Pricing;

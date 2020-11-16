@@ -24,23 +24,23 @@ import "assets/css/bootstrap.min.css";
 import "assets/scss/now-ui-kit.scss?v=1.4.0";
 
 // pages for this kit
-import LandingPage from "views/examples/LandingPage.js";
-import ProfilePage from "views/examples/ProfilePage.js";
+import Home from "views/Home.js";
+import Pricing from "views/Pricing.js";
 
 ReactDOM.render(
   <BrowserRouter>
     <Switch>
       <Switch>
         <Route
-          path="/landing-page"
-          render={(props) => <LandingPage {...props} />}
+          path="/home"
+          render={(props) => <Home {...props} />}
         />
         <Route
-          path="/profile-page"
-          render={(props) => <ProfilePage {...props} />}
+          path="/pricing"
+          render={(props) => <Pricing {...props} />}
         />
-        <Redirect to="/landing-page" />
-        <Redirect from="/" to="/landing-page" />
+        <Redirect to="/home" />
+        <Redirect from="/" to="/home" />
       </Switch>
     </Switch>
   </BrowserRouter>,

@@ -12,7 +12,7 @@ import {
   UncontrolledTooltip,
 } from "reactstrap";
 
-function ExamplesNavbar() {
+function CrystalNavbar() {
   const [navbarColor, setNavbarColor] = React.useState("navbar-transparent");
   const [collapseOpen, setCollapseOpen] = React.useState(false);
   React.useEffect(() => {
@@ -53,7 +53,9 @@ function ExamplesNavbar() {
               target="_blank"
               id="navbar-brand"
             >
+              <NavLink to="/home" tag={Link}>
               Crystal Clear
+              </NavLink>
             </NavbarBrand>
             
             <button
@@ -77,7 +79,7 @@ function ExamplesNavbar() {
           >
             <Nav navbar>
               <NavItem>
-                <NavLink to="/profile-page" tag={Link}>
+                <NavLink to="/pricing" tag={Link}>
                   Pricing
                 </NavLink>
               </NavItem>
@@ -91,12 +93,12 @@ function ExamplesNavbar() {
                   <p className="d-lg-none d-xl-none">Twitter</p>
                 </NavLink>
                 <UncontrolledTooltip target="#twitter-tooltip">
-                  Follow us on Twitter
+                 No Twitter account yet
                 </UncontrolledTooltip>
               </NavItem>
               <NavItem>
                 <NavLink
-                  href="#"
+                  href="https://www.facebook.com/crystalclear2020"
                   target="_blank"
                   id="facebook-tooltip"
                 >
@@ -117,7 +119,7 @@ function ExamplesNavbar() {
                   <p className="d-lg-none d-xl-none">Instagram</p>
                 </NavLink>
                 <UncontrolledTooltip target="#instagram-tooltip">
-                  Follow us on Instagram
+                  No instagram account yet
                 </UncontrolledTooltip>
               </NavItem>
             </Nav>
@@ -128,4 +130,4 @@ function ExamplesNavbar() {
   );
 }
 
-export default ExamplesNavbar;
+export default CrystalNavbar;
