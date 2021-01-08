@@ -117,7 +117,7 @@ export default function ContactUs() {
           <Button
             block
             className="btn-round"
-            color="primary"
+            color="success"
             onClick={sendEmail}
             size="lg"
           >
